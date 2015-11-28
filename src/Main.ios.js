@@ -1,6 +1,8 @@
 var React = require('react-native');
 var I18n = require('react-native-i18n');
 
+var Pages = require('./Pages');
+
 var {
   StyleSheet,
   Text,
@@ -63,9 +65,7 @@ var Main = React.createClass({
             icon={ require('image!account') }
             onPress={ () => this.changeTab('account') }
             selected={ this.state.selectedTab === 'account' }>
-            <View style={ styles.pageView }>
-              <Text>Account</Text>
-            </View>
+            <Pages />
           </TabBarIOS.Item>
         </TabBarIOS>
       </View>
@@ -75,12 +75,12 @@ var Main = React.createClass({
 
 var styles = StyleSheet.create({
   pageView: {
-    backgroundColor: '#000000',
+    backgroundColor: '#ffffff',
     flex: 1
   },
   headerView: {
     flexDirection: 'column',
-    height: 100,
+    height: 80,
     alignItems: 'center'
   },
   image: {
