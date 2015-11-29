@@ -38,34 +38,28 @@ var Main = React.createClass({
             icon={ require('image!play') }
             onPress={ () => this.changeTab('play') }
             selected={ this.state.selectedTab === 'play' }>
-            <View style={ styles.pageView }>
-              <Text>Play</Text>
-            </View>
+            <Pages route="play" />
           </TabBarIOS.Item>
           <TabBarIOS.Item
             title={ I18n.t("tap_say") }
             icon={ require('image!say') }
             onPress={ () => this.changeTab('say') }
             selected={ this.state.selectedTab === 'say' }>
-            <View style={ styles.pageView }>
-              <Text>Say</Text>
-            </View>
+            <Pages route="say" />
           </TabBarIOS.Item>
           <TabBarIOS.Item
             title={ I18n.t("tap_users") }
             icon={ require('image!users') }
             onPress={ () => this.changeTab('users') }
             selected={ this.state.selectedTab === 'users' }>
-            <View style={ styles.pageView }>
-              <Text>Users</Text>
-            </View>
+            <Pages route="users" />
           </TabBarIOS.Item>
           <TabBarIOS.Item
             title={ I18n.t("tap_account") }
             icon={ require('image!account') }
             onPress={ () => this.changeTab('account') }
             selected={ this.state.selectedTab === 'account' }>
-            <Pages />
+            <Pages route="account" />
           </TabBarIOS.Item>
         </TabBarIOS>
       </View>

@@ -4,14 +4,40 @@ var Page = require('./Page');
 
 var {
   StyleSheet,
-  Navigator
+  Navigator,
+  Text
 } = React;
+
+var NavigationBarRouteMapper = {
+  LeftButton: function(route, navigator, index, navState) {
+    return (
+      <Text>
+        {route.title} [{index}]
+      </Text>
+    );
+  },
+  RightButton: function(route, navigator, index, navState) {
+    return null;
+  },
+  Title: function(route, navigator, index, navState) {
+    return (
+      <Text>
+        {route.title} [{index}]
+      </Text>
+    );
+  },
+};
 
 var Pages = React.createClass({
   render: function() {
     return (
       <Navigator
-        initialRoute={{name: 'My First Scene', index: 0}}
+        initialRoute={{name: this.props.route, index: 0}}
+        navigationBar={
+          <Navigator.NavigationBar
+            routeMapper={NavigationBarRouteMapper}
+          />
+        }
         renderScene={(route, navigator) =>
           <Page
             name={route.name}

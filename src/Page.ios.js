@@ -12,16 +12,16 @@ var {
 var Page = React.createClass({
   render: function() {
     return (
-      <WebView
-        url='http://www.google.fr'
+      <WebView style={ styles.webview }
+        url='http://www.darkwood.dev/app_dev.php/jouer/iphone?state=login'
         />
     );
   }
 });
 
 var styles = StyleSheet.create({
-  text: {
-    flex: 1
+  webview: {
+    marginTop: 80
   }
 });
 
