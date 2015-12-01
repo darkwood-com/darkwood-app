@@ -41,7 +41,7 @@ var Pages = React.createClass({
       <Navigator
         initialRoute={{
           name: this.props.route,
-          title: I18n.t('route_account'),
+          title: I18n.t('route_'+this.props.route),
           index: 0
         }}
         navigationBar={
