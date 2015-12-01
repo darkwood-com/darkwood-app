@@ -6,7 +6,8 @@ var {
   Text,
   View,
   Image,
-  WebView
+  WebView,
+  ActivityIndicatorIOS
 } = React;
 
 var Page = React.createClass({
@@ -14,6 +15,19 @@ var Page = React.createClass({
     return (
       <WebView style={ styles.webview }
         url={ I18n.t('route_' + this.props.route + '_url') }
+        startInLoadingState={true}
+        renderLoading={ () => {
+          return (
+            <View style={ styles.loadingView }>
+              <ActivityIndicatorIOS
+                size='large'
+                />
+            </View>
+          )
+        }}
+        onNavigationStateChange={(e) => {
+          return console.log(e)
+        }}
         />
     );
   }
@@ -21,8 +35,14 @@ var Page = React.createClass({
 
 var styles = StyleSheet.create({
   webview: {
-    marginTop: 80,
+    marginTop: 50,
     backgroundColor: "#000000"
+  },
+  loadingView: {
+    backgroundColor: '#000000',
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   }
 });
 
