@@ -1,5 +1,5 @@
 var React = require('react-native');
-var I18n = require('react-native-i18n');
+var I18n = require('./I18n');
 
 var {
   StyleSheet,
