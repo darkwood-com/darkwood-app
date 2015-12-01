@@ -34,6 +34,7 @@ var Main = React.createClass({
         </View>
         <TabBarIOS style={ styles.pageView }>
           <TabBarIOS.Item
+            ref='play'
             title={ I18n.t("tap_play") }
             icon={ require('image!play') }
             onPress={ () => this.changeTab('play') }
@@ -41,6 +42,7 @@ var Main = React.createClass({
             <Pages route="play" />
           </TabBarIOS.Item>
           <TabBarIOS.Item
+            ref='say'
             title={ I18n.t("tap_say") }
             icon={ require('image!say') }
             onPress={ () => this.changeTab('say') }
@@ -48,6 +50,7 @@ var Main = React.createClass({
             <Pages route="say" />
           </TabBarIOS.Item>
           <TabBarIOS.Item
+            ref='users'
             title={ I18n.t("tap_users") }
             icon={ require('image!users') }
             onPress={ () => this.changeTab('users') }
@@ -55,6 +58,7 @@ var Main = React.createClass({
             <Pages route="users" />
           </TabBarIOS.Item>
           <TabBarIOS.Item
+            ref='account'
             title={ I18n.t("tap_account") }
             icon={ require('image!account') }
             onPress={ () => this.changeTab('account') }
@@ -69,7 +73,7 @@ var Main = React.createClass({
 
 var styles = StyleSheet.create({
   pageView: {
-    backgroundColor: '#ffffff',
+    backgroundColor: '#000000',
     flex: 1
   },
   headerView: {

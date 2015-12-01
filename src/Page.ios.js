@@ -21,7 +21,8 @@ var Page = React.createClass({
 
 var styles = StyleSheet.create({
   webview: {
-    marginTop: 80
+    marginTop: 80,
+    backgroundColor: "#000000"
   }
 });
 

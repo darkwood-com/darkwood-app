@@ -18,7 +18,7 @@ var NavigationBarRouteMapper = {
             navigator.pop();
           }
         }}>
-          <Text>Back</Text>
+          <Text style={ styles.textNav }>Back</Text>
         </TouchableHighlight>
       );
     }
@@ -30,7 +30,7 @@ var NavigationBarRouteMapper = {
   },
   Title: function(route, navigator, index, navState) {
     return (
-      <Text>{route.title}</Text>
+      <Text style={ styles.textNav }>{route.title}</Text>
     );
   },
 };
@@ -58,5 +58,12 @@ var Pages = React.createClass({
     );
   }
 });
+
+var styles = StyleSheet.create({
+  textNav: {
+    color: '#AAAAAA',
+  }
+});
+
 
 module.exports = Pages
