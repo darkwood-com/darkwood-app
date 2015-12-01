@@ -13,7 +13,7 @@ var Page = React.createClass({
   render: function() {
     return (
       <WebView style={ styles.webview }
-        url='http://www.darkwood.dev/app_dev.php/jouer/iphone?state=login'
+        url={ I18n.t('route_' + this.props.route + '_url') }
         />
     );
   }

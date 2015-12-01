@@ -1,4 +1,5 @@
 var I18n = require('react-native-i18n');
+var baseurl = 'http://www.darkwood.dev/app_dev.php';
 
 I18n.fallbacks = true;
 I18n.translations = {
@@ -9,8 +10,11 @@ I18n.translations = {
         tap_account: "Compte",
         route_play: "Jouer",
         route_say: "Chat",
+        route_say_url: baseurl + "/jouer/iphone?state=chat",
         route_users: "Joueurs",
-        route_account: "Compte"
+        route_users_url: baseurl + "/jouer/iphone?state=users",
+        route_account: "Compte",
+        route_account_url: baseurl + "/jouer/iphone?state=login",
     },
     en: {
         tap_play: "Play",
@@ -19,8 +23,11 @@ I18n.translations = {
         tap_account: "Account",
         route_play: "Play",
         route_say: "Chat",
+        route_say_url: baseurl + "/en/play/iphone?state=chat",
         route_users: "Players",
-        route_account: "Account"
+        route_users_url: baseurl + "/en/play/iphone?state=users",
+        route_account: "Account",
+        route_account_url: baseurl + "/en/play/iphone?state=login",
     },
     de: {
         tap_play: "Spiele",
@@ -29,8 +36,11 @@ I18n.translations = {
         tap_account: "Konto",
         route_play: "Spiele",
         route_say: "Chat",
+        route_say_url: baseurl + "/de/spiel/iphone?state=chat",
         route_users: "Spieler",
-        route_account: "Konto"
+        route_users_url: baseurl + "/de/spiel/iphone?state=users",
+        route_account: "Konto",
+        route_account_url: baseurl + "/de/spiel/iphone?state=login",
     }
 };
 

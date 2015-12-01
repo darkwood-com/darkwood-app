@@ -30,7 +30,7 @@ var NavigationBarRouteMapper = {
   },
   Title: function(route, navigator, index, navState) {
     return (
-      <Text>{route.title} [{index}]</Text>
+      <Text>{route.title}</Text>
     );
   },
 };
@@ -51,7 +51,7 @@ var Pages = React.createClass({
         }
         renderScene={(route, navigator) =>
           <Page
-            name={route.name}
+            route={route.name}
           />
         }
       />
