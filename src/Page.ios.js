@@ -11,15 +11,17 @@ var {
 } = React;
 
 var Page = React.createClass({
-  reload: function() {
-    this.refs.webview.reload();
+  getInitialState: function() {
+    return {
+      url: this.props.route
+    };
   },
   render: function() {
     return (
       <WebView
         ref='webview'
         style={ styles.webview }
-        url={ I18n.t('route_' + this.props.route + '_url') }
+        url={ I18n.t('route_' + this.state.url + '_url') }
         startInLoadingState={true}
         renderLoading={ () => {
           return (
@@ -35,6 +37,9 @@ var Page = React.createClass({
         }}
         />
     );
+  },
+  reload: function() {
+    this.refs.webview.reload();
   }
 });
 
