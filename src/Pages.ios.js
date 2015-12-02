@@ -36,9 +36,12 @@ var NavigationBarRouteMapper = {
 };
 
 var Pages = React.createClass({
+  reload: function() {
+    this.refs.nav.refs.page.reload();
+  },
   render: function() {
     return (
-      <Navigator
+      <Navigator ref='nav'
         initialRoute={{
           name: this.props.route,
           title: I18n.t('route_'+this.props.route),
@@ -50,9 +53,7 @@ var Pages = React.createClass({
           />
         }
         renderScene={(route, navigator) =>
-          <Page
-            route={route.name}
-          />
+          <Page ref='page' route={route.name} />
         }
       />
     );

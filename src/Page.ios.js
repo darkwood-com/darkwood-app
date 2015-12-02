@@ -11,9 +11,14 @@ var {
 } = React;
 
 var Page = React.createClass({
+  reload: function() {
+    this.refs.webview.reload();
+  },
   render: function() {
     return (
-      <WebView style={ styles.webview }
+      <WebView
+        ref='webview'
+        style={ styles.webview }
         url={ I18n.t('route_' + this.props.route + '_url') }
         startInLoadingState={true}
         renderLoading={ () => {
@@ -26,7 +31,7 @@ var Page = React.createClass({
           )
         }}
         onNavigationStateChange={(e) => {
-          return console.log(e)
+          console.log(e)
         }}
         />
     );

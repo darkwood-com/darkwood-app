@@ -19,6 +19,10 @@ var Main = React.createClass({
     }
   },
   changeTab(tabName) {
+    if(this.refs[tabName]) {
+      this.refs[tabName].reload();
+    }
+
     this.setState({
       selectedTab: tabName
     });
@@ -34,36 +38,32 @@ var Main = React.createClass({
         </View>
         <TabBarIOS style={ styles.pageView }>
           <TabBarIOS.Item
-            ref='play'
             title={ I18n.t("tap_play") }
             icon={ require('image!play') }
             onPress={ () => this.changeTab('play') }
             selected={ this.state.selectedTab === 'play' }>
-            <Pages route="play" />
+            <Pages ref='play' route="play" />
           </TabBarIOS.Item>
           <TabBarIOS.Item
-            ref='say'
             title={ I18n.t("tap_say") }
             icon={ require('image!say') }
             onPress={ () => this.changeTab('say') }
             selected={ this.state.selectedTab === 'say' }>
-            <Pages route="say" />
+            <Pages ref='say' route="say" />
           </TabBarIOS.Item>
           <TabBarIOS.Item
-            ref='users'
             title={ I18n.t("tap_users") }
             icon={ require('image!users') }
             onPress={ () => this.changeTab('users') }
             selected={ this.state.selectedTab === 'users' }>
-            <Pages route="users" />
+            <Pages ref='users' route="users" />
           </TabBarIOS.Item>
           <TabBarIOS.Item
-            ref='account'
             title={ I18n.t("tap_account") }
             icon={ require('image!account') }
             onPress={ () => this.changeTab('account') }
             selected={ this.state.selectedTab === 'account' }>
-            <Pages route="account" />
+            <Pages ref='account' route="account" />
           </TabBarIOS.Item>
         </TabBarIOS>
       </View>
