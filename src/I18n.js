@@ -1,5 +1,6 @@
 var I18n = require('react-native-i18n');
-var baseurl = 'http://www.darkwood.dev/app_dev.php';
+//var baseurl = 'http://www.darkwood.dev/app_dev.php';
+var baseurl = 'http://www.darkwood.dev';
 
 I18n.fallbacks = true;
 I18n.translations = {

@@ -63,7 +63,9 @@ var NavigationBarRouteMapper = {
 
 var Pages = React.createClass({
   reload: function(route) {
-    this.refs.nav.refs.page.reload(route);
+    if(this.refs.nav.refs.page) {
+      this.refs.nav.refs.page.reload(route);
+    }
   },
   render: function() {
     return (
