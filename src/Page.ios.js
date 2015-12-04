@@ -3,9 +3,7 @@ var I18n = require('./I18n');
 
 var {
   StyleSheet,
-  Text,
   View,
-  Image,
   WebView,
   ActivityIndicatorIOS
 } = React;
@@ -13,7 +11,7 @@ var {
 var Page = React.createClass({
   getInitialState: function() {
     return {
-      url: this.props.route
+      url: I18n.t('route_' + this.props.route + '_url')
     };
   },
   render: function() {
@@ -21,7 +19,7 @@ var Page = React.createClass({
       <WebView
         ref='webview'
         style={ styles.webview }
-        url={ I18n.t('route_' + this.state.url + '_url') }
+        url={ this.state.url }
         startInLoadingState={true}
         renderLoading={ () => {
           return (
@@ -32,14 +30,23 @@ var Page = React.createClass({
             </View>
           )
         }}
-        onNavigationStateChange={(e) => {
-          console.log(e)
-        }}
+        onNavigationStateChange={this.onNavigationStateChange}
         />
     );
   },
-  reload: function() {
-    this.refs.webview.reload();
+  onNavigationStateChange: function(navState) {
+    this.setState({
+      url: navState.url,
+    });
+  },
+  reload: function(route) {
+    var url = I18n.t('route_' + route + '_url');
+    console.log(url, route, this.state.url);
+    if (url === this.state.url) {
+      this.refs.webview.reload();
+    } else {
+      this.setState({url: url});
+    }
   }
 });
 

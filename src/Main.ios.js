@@ -20,7 +20,7 @@ var Main = React.createClass({
   },
   changeTab(tabName) {
     if(this.refs[tabName]) {
-      this.refs[tabName].reload();
+      this.refs[tabName].reload(tabName);
     }
 
     this.setState({
