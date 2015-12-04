@@ -41,7 +41,6 @@ var Page = React.createClass({
   },
   reload: function(route) {
     var url = I18n.t('route_' + route + '_url');
-    console.log(url, route, this.state.url);
     if (url === this.state.url) {
       this.refs.webview.reload();
     } else {

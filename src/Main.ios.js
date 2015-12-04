@@ -45,11 +45,11 @@ var Main = React.createClass({
             <Pages ref='play' route="play" />
           </TabBarIOS.Item>
           <TabBarIOS.Item
-            title={ I18n.t("tap_say") }
+            title={ I18n.t("tap_chat") }
             icon={ require('image!say') }
-            onPress={ () => this.changeTab('say') }
-            selected={ this.state.selectedTab === 'say' }>
-            <Pages ref='say' route="say" />
+            onPress={ () => this.changeTab('chat') }
+            selected={ this.state.selectedTab === 'chat' }>
+            <Pages ref='chat' route="chat" />
           </TabBarIOS.Item>
           <TabBarIOS.Item
             title={ I18n.t("tap_users") }
