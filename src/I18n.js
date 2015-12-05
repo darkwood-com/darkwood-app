@@ -25,6 +25,7 @@ I18n.translations = {
         route_rank_daily_fight_url: baseurl + "/jouer/iphone?state=rank&mode=daily_fight_by_defeats",
         route_account: "Compte",
         route_account_url: baseurl + "/jouer/iphone?state=login",
+        back: "Retour",
     },
     en: {
         tap_play: "Play",
@@ -47,6 +48,7 @@ I18n.translations = {
         route_rank_daily_fight_url: baseurl + "/en/play/iphone?state=rank&mode=daily_fight_by_defeats",
         route_account: "Account",
         route_account_url: baseurl + "/en/play/iphone?state=login",
+        back: "Back",
     },
     de: {
         tap_play: "Spiele",
@@ -69,6 +71,7 @@ I18n.translations = {
         route_rank_daily_fight_url: baseurl + "/de/spiel/iphone?state=rank&mode=daily_fight_by_defeats",
         route_account: "Konto",
         route_account_url: baseurl + "/de/spiel/iphone?state=login",
+        back: "Zurück",
     }
 };
 

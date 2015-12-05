@@ -34,7 +34,7 @@ var NavigationBarRouteMapper = {
             navigator.pop();
           }
         }}>
-          <Text style={ styles.textNav }>Back</Text>
+          <Text style={ styles.textNav }>{I18n.t('back')}</Text>
         </TouchableHighlight>
       );
     }
