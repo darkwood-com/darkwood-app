@@ -1,8 +1,8 @@
 var I18n = require('react-native-i18n');
 var Device = require('react-native-device');
 
-var baseUrl = 'http://www.darkwood.dev/app_dev.php';
-//var baseUrl = 'http://www.darkwood.fr';
+//var baseUrl = 'http://www.darkwood.dev/app_dev.php';
+var baseUrl = 'http://www.darkwood.fr';
 var display = 'iphone';
 if(Device.isIpad()) {
   display = 'ipad';
