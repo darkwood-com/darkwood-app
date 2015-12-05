@@ -35,7 +35,7 @@ var Page = React.createClass({
     );
   },
   onNavigationStateChange: function(navState) {
-    console.log(navState.ur);
+    //console.log(navState.ur);
 
     this.setState({
       url: navState.url,
