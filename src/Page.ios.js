@@ -35,7 +35,10 @@ var Page = React.createClass({
     );
   },
   onNavigationStateChange: function(navState) {
-    //console.log(navState.ur);
+    //submit form ?
+    if(navState.navigationType == 1) {
+      return;
+    }
 
     this.setState({
       url: navState.url,
