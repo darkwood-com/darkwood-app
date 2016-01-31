@@ -1,4 +1,4 @@
-package com.darkwoodapp;
+package com.darkwood.darkwood;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactPackage;

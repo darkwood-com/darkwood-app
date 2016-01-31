@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.darkwoodapp">
+    package="com.darkwood.darkwood">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
