@@ -4,8 +4,7 @@ var I18n = require('./I18n');
 var {
   StyleSheet,
   View,
-  WebView,
-  ActivityIndicatorIOS
+  WebView
 } = React;
 
 var Page = React.createClass({
@@ -21,15 +20,6 @@ var Page = React.createClass({
         style={ styles.webview }
         url={ this.state.url }
         startInLoadingState={true}
-        renderLoading={ () => {
-          return (
-            <View style={ styles.loadingView }>
-              <ActivityIndicatorIOS
-                size='large'
-                />
-            </View>
-          )
-        }}
         onNavigationStateChange={this.onNavigationStateChange}
         />
     );
