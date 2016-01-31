@@ -3,17 +3,16 @@
  * https://github.com/facebook/react-native
  */
 'use strict';
-
-var React = require('react-native');
-var {
+import React, {
   AppRegistry,
+  Component,
   StyleSheet,
   Text,
-  View,
-} = React;
+  View
+} from 'react-native';
 
-var DarkwoodApp = React.createClass({
-  render: function() {
+class DarkwoodApp extends Component {
+  render() {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
@@ -28,9 +27,9 @@ var DarkwoodApp = React.createClass({
       </View>
     );
   }
-});
+}
 
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
